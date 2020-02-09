@@ -1,10 +1,15 @@
+server:
+  port: 2335
+
 spring:
   application:
     name: one-team-uap
   zipkin:
     base-url: http://${eureka.instance.hostname}:9411
-server:
-  port: 2355
+  boot:
+    admin:
+      client:
+        url: http://${eureka.instance.hostname}:2338
 
 eureka:
   client:
